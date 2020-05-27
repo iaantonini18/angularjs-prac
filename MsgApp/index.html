@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='MsgApp'>
+<html ng-app="MsgApp">
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
@@ -8,8 +8,14 @@
 </head>
 <body>
     <h1>Some Message Fun</h1>
-    <div ng-controller='MsgController'>
-        
+    <div ng-controller="MsgController">
+        {{name}} has a message: <br>
+        {{sayMessage()}}
+        <div>
+          <button ng-click="feed()">Give {{name}} snaaaacks</button>
+          <br>
+          <img ng-src="images/{{stateOfBeing}}.jpg" alt="How {{name}} is feeling">
+        </div>
     </div>
 </body>
 </html>
