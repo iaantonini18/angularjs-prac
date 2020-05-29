@@ -10,9 +10,14 @@
     <h1>Some Message Fun</h1>
     <div ng-controller="MsgController">
         {{name}} has a message: <br>
-        {{sayMessage()}}
+        Truth: {{sayMessage() | uppercase }} <br>
+        Lie: {{sayMessage() | hates }} <br>
+        Super Truth: {{ sayMessage() | loves | uppercase }} <br>
         <div>
           <button ng-click="feed()">Give {{name}} snaaaacks</button>
+          <button ng-click="unfeed()">Take {{name}}'s snaaaacks</button>
+          <br>
+          You've given {{name}} {{snackCount}} snaaaacks!
           <br>
           <img ng-src="images/{{stateOfBeing}}.jpg" alt="How {{name}} is feeling">
         </div>
